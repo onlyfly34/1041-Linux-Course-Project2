@@ -21,7 +21,7 @@ main(int argc, char **argv)
 
   pid=atoi(argv[1]);
 
-  if(wake_up_my_process(pid)<0)  //new system call two
+  if(syscall(352,pid)<0)  //new system call two
   {
     printf("Cannot wake up process %d\n", pid);
     exit(0);
